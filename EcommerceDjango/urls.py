@@ -24,4 +24,5 @@ urlpatterns = [
     path('', views.home, name='home'),
     path('store/', include('store.urls')), #include the store urls from store\urls.py
     path('cart/', include('cart.urls')), #include the cart urls from cart\urls.py
+    path('accounts/', include('accounts.urls')), #include the accounts urls from accounts\urls.py
 ] + static (settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
