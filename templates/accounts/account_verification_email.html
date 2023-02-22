@@ -1,0 +1,17 @@
+{% autoescape off %}
+
+    Hello {{ user.first_name }}.
+
+    You're receiving this email because you signed up for a new account at {{ site_name }}.
+
+    Please, click the link below to activate your account:
+
+    http://{{ domain }}{% url 'activate' uidb64=uid token=token %}
+
+    If you didn't sign up for a new account, please ignore this email.
+
+    Thank you.
+
+    GreatKart Team
+
+{% endautoescape %}
