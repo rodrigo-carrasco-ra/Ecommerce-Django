@@ -117,3 +117,6 @@ def remove_cart_item(request, product_id, cart_item_id):
     cart_item = CartItem.objects.get(product=product, cart=cart, id=cart_item_id) # get the cart item using the product, cart and the cart item id
     cart_item.delete()
     return redirect('cart')
+
+def checkout(request):
+    return render (request, 'store/checkout.html')
